@@ -42,6 +42,8 @@ exports.newMenu = (ucapan, ownerName, botName, prefix, pendaftar, runtime, pushn
 ╘═══ 《 *By ${ownerName}* 》 ═══`
 }
 
+[{buttonId:'#owner',buttonText:{displayText:'Owner'},type:1}]
+
 exports.stickerMenu = (prefix, ownerName) => {
     return `╒═══ 《 *STICKER MENU* 》 ═══
 ├────────────────────
