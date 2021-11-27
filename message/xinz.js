@@ -1602,6 +1602,18 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
                 const rmoreteks2 = q.split('|')[1] ? q.split('|')[1] : ''
                 reply(`${rmoreteks1}${readMore}${rmoreteks2}`)
                 break
+
+                    }
+                    break
+                case 'brainly':
+                    try {
+                        if(isLimit(data.sender)) return data.reply(mess.limit)
+                        if(data.body == "") return data.reply(`Kirim perintah *${data.prefix}brainly [ query ]*\nContoh : ${data.prefix}brainly siapa penemu lampu`)
+                        data.reply(mess.wait)
+                        res = await axios.get(`${configs.apiUrl}/api/brainly?apikey=${configs.zeksKey}&q=${data.body}&count=3`)
+                        for(let i = 0; i < res.data.data.length; i++) {
+                            await Client.reply(from, `Pertanyaan : ${res.data.data[i].question}\n\nJawaban : ${res.data.data[i].answer[0].text}`, message)
+
 //------------------< VVIBU >-------------------
 			case prefix+'waifu':{
                 if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
