@@ -1016,6 +1016,12 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
 					const cek = bapak[Math.floor(Math.random() * bapak.length)]
 					xinz.sendMessage(from, cek, text, { quoted: msg })
 					break
+
+				case prefix+'seberapacringe': // By Ramlan ID
+					const cringe = ['kOk kamu cringe banget Banh\n100%', 'Jokes kamu terlalu cringe ngentod/n80%', 'kamu lumayan cringe bang besok besok jangan buat jokes lagi/n60%', 'hebat bang kamu gak cringe walaupun kek kontol/n45%', 'kamu gak cringe bang hebat jokes mu lucu/n00% By : Afkhagg']
+					const seberapa = bapak[Math.floor(Math.random() * cringe.length)]
+					xinz.sendMessage(from, seberapa, text, { quoted: msg })
+					break
 //------------------< Random >---------------------
 				case prefix+'quotes':{
 					data = fs.readFileSync("../lib/quote.json");
@@ -1097,7 +1103,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
                 xinz.sendContact(from, q.split("|")[0], q.split("|")[1], msg)
                 break
             case prefix+'hidetag':{
-                if (!isPremium) return reply(`Kamu bukan user premium, kirim perintah *${prefix}daftarprem* untuk membeli premium`)
+                if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
                 if (args.length < 2) return reply(`Masukkan text`)
                 let arr = [];
                 for (let i of groupMembers){
