@@ -38,6 +38,7 @@ exports.newMenu = (ucapan, ownerName, botName, prefix, pendaftar, runtime, pushn
 ├≽ *${prefix}toolsmenu*
 ├≽ *${prefix}storagemenu*
 ├≽ *${prefix}othermenu*
+├≽ *${prefix}makermenu*
 ├────────────────────
 ╘═══ 《 *By ${ownerName}* 》 ═══`
 }
@@ -226,54 +227,27 @@ exports.toolsMenu = (prefix, ownerName) => {
 exports.makerMenu = (prefix, ownerName) => {
     return `╒═══ 《 *MAKER MENU* 》 ═══
 ├────────────────────
-├≽ *${prefix}hartatahta*
-├≽ *${prefix}neon*
-├≽ *${prefix}matrix*
-├≽ *${prefix}blackpink*
-├≽ *${prefix}halloween*
-├≽ *${prefix}thundername*
-├≽ *${prefix}devilwings*
-├≽ *${prefix}cloudtext*
-├≽ *${prefix}bloodtext*
-├≽ *${prefix}bloodtext2*
-├≽ *${prefix}steeltext*
-├≽ *${prefix}lavatext*
-├≽ *${prefix}toxiclogo*
+├≽ *${prefix}bneon*
+├≽ *${prefix}gneon*
 ├≽ *${prefix}dropwater*
-├≽ *${prefix}metaldark*
-├≽ *${prefix}sandwrite*
-├≽ *${prefix}3dwater*
-├≽ *${prefix}graffiti*
-├≽ *${prefix}graffiti2*
-├≽ *${prefix}phlogo*
-├≽ *${prefix}glitch*
-├≽ *${prefix}graffiti3*
-├≽ *${prefix}layeredtext*
-├≽ *${prefix}vintage*
-├≽ *${prefix}3dspace*
-├≽ *${prefix}stonetext*
-├≽ *${prefix}avengers*
-├≽ *${prefix}marvellogo*
-├≽ *${prefix}3dmetal*
-├≽ *${prefix}lionlogo*
-├≽ *${prefix}wolflogo*
-├≽ *${prefix}ninjalogo*
-├≽ *${prefix}pubglogo*
-├≽ *${prefix}shadowtext*
+├≽ *${prefix}tfire*
+├≽ *${prefix}sandw*
+├≽ *${prefix}epep*
+├≽ *${prefix}text3d*
+├≽ *${prefix}text3dbox*
+├≽ *${prefix}logobp*
+├≽ *${prefix}naruto*
+├≽ *${prefix}tlight*
+├≽ *${prefix}thundertext*
+├≽ *${prefix}glowtext*
 ├≽ *${prefix}smoketext*
-├≽ *${prefix}romancetext*
-├≽ *${prefix}carvedwood*
-├≽ *${prefix}harrypotter*
-├≽ *${prefix}flamingtext*
-├≽ *${prefix}falleaves*
-├≽ *${prefix}underwater*
-├≽ *${prefix}wolfmetal*
-├≽ *${prefix}woodboard*
-├≽ *${prefix}undergrass*
-├≽ *${prefix}coffetext*
-├≽ *${prefix}lovetext*
-├≽ *${prefix}burnpaper*
-├≽ *${prefix}lovemessage*
+├≽ *${prefix}flowertext*
+├≽ *${prefix}flametext*
+├≽ *${prefix}wolflogo*
+├≽ *${prefix}gtext*
+├≽ *${prefix}pubglogo*
+├≽ *${prefix}watercolour*
+├≽ *${prefix}hartatahta*
 ├─────────────────────
 ╘═══ 《 *By ${ownerName}* 》 ═══`
 }
