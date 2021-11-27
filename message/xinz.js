@@ -844,14 +844,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
                 break
             
 //------------------< Text Marker >-------------------
-            case prefix+'harta': case prefix+'hartatahta': case prefix+'tahta':{
-                if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-                if (args.length < 2) return reply(`Penggunaan ${command} text\n\nContoh : ${command} Rara`)
-                reply('[❗] Hirti Tihti Tai Anjg :v')
-                xinz.sendImage(from, await getBuffer(`https://api-ramlan.herokuapp.com/api/other/tahta?q=${args[1]}&apikey=${apikey}`), '', msg).catch(() => reply(mess.error.api))
-                limitAdd(sender, limit)
-                }
-                break
+            
 //>>> TEXT PRO ME
                                 case 'qrencode':
                 case 'barcode':
@@ -879,8 +872,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
                 case 'glowtext':
                 case 'smoketext':
                 case 'flowertext':
-                case 'lithgtext':
-                case 'nulis':
+                case 'lithtext':
                     try {
                     if(isLimit(data.sender)) return data.reply(mess.limit)
                     if(data.body == "") return data.reply(`Kirim perintah *${data.prefix}${data.command} [ teks ]*\nContoh : ${data.prefix}${data.command} shiro`)
