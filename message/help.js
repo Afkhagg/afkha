@@ -170,6 +170,7 @@ exports.searchMenu = (prefix, ownerName) => {
 ├────────────────────
 ├≽ *${prefix}yts*
 ├≽ *${prefix}pinterest*
+├≽ *${prefix}brainly*
 ├─────────────────────
 ╘═══ 《 *By ${ownerName}* 》 ═══`
 }
