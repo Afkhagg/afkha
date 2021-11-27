@@ -846,7 +846,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
 //------------------< Text Marker >-------------------
             
 //>>> TEXT PRO ME
-                                case 'qrencode':
+                case 'qrencode':
                 case 'barcode':
                 case 'bneon':
                 case 'matrix':
@@ -900,7 +900,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
                     } catch {
                         data.reply('error')
                     }
-					break
+		   break
                 case 'tahta':
                 case 'harta':
                 case 'hartatahta':
@@ -914,15 +914,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
                         author: 'AUTHOR'
 
 //------------------< Math Random >-------------------
-				case prefix+'ganteng':
-					if (!isGroup)return reply(mess.OnlyGrup)
-					var kamu = groupMembers
-					var cinta = groupMembers
-					var aku = cinta[Math.floor(Math.random() * kamu.length)]
-					var cintax = kamu[Math.floor(Math.random() * cinta.length)]
-					let tejs = `Cowok paling ganteng di group ini adalah\n*@${aku.jid.split('@')[0]}*`
-					mentions(tejs, [aku.jid, cintax.jid], true)
-					break
+				
 				case prefix+'cantik':
 					if (!isGroup)return reply(mess.OnlyGrup)
 					var kamu = groupMembers
