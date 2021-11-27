@@ -914,16 +914,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
                         author: 'AUTHOR'
 
 //------------------< Math Random >-------------------
-				
-				case prefix+'cantik':
-					if (!isGroup)return reply(mess.OnlyGrup)
-					var kamu = groupMembers
-					var cinta = groupMembers
-					var aku = cinta[Math.floor(Math.random() * kamu.length)]
-					var cintax = kamu[Math.floor(Math.random() * cinta.length)]
-					let gejs = `Cewek️ paling cantik di group ini adalah\n*@${cintax.jid.split('@')[0]}*`
-					mentions(gejs, [aku.jid, cintax.jid], true)
-					break
+		
 					case prefix+'jadian':
 					if (!isGroup)return reply(mess.OnlyGrup)
 					var kamu = groupMembers
@@ -933,22 +924,25 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
 					let vejs = `Ciee.. yang lagi jadian\n*@${aku.jid.split('@')[0]}* ♥️ @${cintax.jid.split('@')[0]}\nSemoga Langgeng Hii`
 					mentions(vejs, [aku.jid, cintax.jid], true)
 					break
-				case prefix+'seberapagay':
-                if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} Rara`)
-				axios.get(`https://arugaz.herokuapp.com/api/howgay`).then(res => res.data).then(res =>
-				textImg(`Nih Liat Data Gay Si ${q}\n\nPersentase Gay : ${res.persen}%\nAlert!!! : ${res.desc}`))
-				break
-				case prefix+'bisakah':
-				if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} aku jadi ganteng`)
-					const bisa = ['Tentu Saja Bisa! Kamu Adalah Orang Paling Homky', 'Gak Bisa Ajg Aowkwowk', 'Hmm Gua Gak Tau Yaa, tanya ama bapakau', 'Ulangi Tod Gua Ga Paham']
-					const keh = bisa[Math.floor(Math.random() * bisa.length)]
-					xinz.sendMessage(from, 'Pertanyaan : bisakah ' + q + '\n\nJawaban : ' + keh, text, { quoted: msg })
-					break
+				
+                                        case prefix+'seberapagay':
+                                       if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} Rara`)
+				       axios.get(`https://arugaz.herokuapp.com/api/howgay`).then(res => res.data).then(res =>
+				       textImg(`Nih Liat Data Gay Si ${q}\n\nPersentase Gay : ${res.persen}%\nAlert!!! : ${res.desc}`))
+				       break
+				
 					case prefix+'kapankah':
 					if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} aku jadi wibu`)
 					const kapan = ['Besok', 'Lusa', 'Tadi', '4 Hari Lagi', '5 Hari Lagi', '6 Hari Lagi', '1 Minggu Lagi', '2 Minggu Lagi', '3 Minggu Lagi', '1 Bulan Lagi', '2 Bulan Lagi', '3 Bulan Lagi', '4 Bulan Lagi', '5 Bulan Lagi', '6 Bulan Lagi', '1 Tahun Lagi', '2 Tahun Lagi', '3 Tahun Lagi', '4 Tahun Lagi', '5 Tahun Lagi', '6 Tahun Lagi', '1 Abad lagi', '3 Hari Lagi']
 					const koh = kapan[Math.floor(Math.random() * kapan.length)]
 					xinz.sendMessage(from, 'Pertanyaan : kapankah ' + q + '\n\nJawaban : ' + koh, text, { quoted: msg })
+					break
+                               
+                                        case prefix+'bisakah':
+				if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} aku jadi ganteng`)
+					const bisa = ['Tentu Saja Bisa! Kamu Adalah Orang Paling Homky', 'Gak Bisa Ajg Aowkwowk', 'Hmm Gua Gak Tau Yaa, tanya ama bapakau', 'Ulangi Tod Gua Ga Paham']
+					const keh = bisa[Math.floor(Math.random() * bisa.length)]
+					xinz.sendMessage(from, 'Pertanyaan : bisakah ' + q + '\n\nJawaban : ' + keh, text, { quoted: msg })
 					break
 
 				case prefix+'apakah':
@@ -985,7 +979,8 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
 					const der = dare[Math.floor(Math.random() * dare.length)]
 					xinz.sendImage(from, await getBuffer(`https://i.ibb.co/305yt26/bf84f20635dedd5dde31e7e5b6983ae9.jpg`), 'Dare\n\n' + der , msg)
 					break
-				case prefix+'cekbapak': // By Ramlan ID
+				
+                                 case prefix+'cekbapak': // By Ramlan ID
 					const bapak = ['Wah Mantap Lu Masih Punya Bapack\nPasti Bapack Nya Kuli :v\nAwowkwokwwok\n#CandabOs', 'Aowkwwo Disini Ada Yteam :v\nLu Yteam Bro? Awowkwowk\nSabar Bro Ga Punya Bapack\n#Camda', 'Bjir Bapack Mu Ternyata Sudah Cemrai\nSedih Bro Gua Liatnya\nTapi Nih Tapi :v\nTetep Ae Lu Yteam Aowkwowkw Ngakak :v', 'Jangan #cekbapak Mulu Broo :v\nKasian Yang Yteam\nNtar Tersinggung Kan\nYahahaha Hayyuk By : Ramlan ID']
 					const cek = bapak[Math.floor(Math.random() * bapak.length)]
 					xinz.sendMessage(from, cek, text, { quoted: msg })
